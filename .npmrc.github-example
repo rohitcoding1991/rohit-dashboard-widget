@@ -1,0 +1,11 @@
+# GitHub Packages Registry Configuration
+# Copy this to your project's .npmrc file to install packages from GitHub
+
+# GitHub Packages authentication (replace YOUR_GITHUB_TOKEN with your personal access token)
+//npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
+
+# Route @rohitcoding1991 scoped packages to GitHub Packages
+@rohitcoding1991:registry=https://npm.pkg.github.com
+
+# Telesero private registry authentication (if using Telesero dependencies)
+//repo.npm.systems.cxcl.io/:_authToken="${TELESERO_NPM_TOKEN}"

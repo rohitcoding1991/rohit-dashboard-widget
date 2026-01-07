@@ -1,0 +1,4 @@
+./reqrequirejs.standalone.build.js
+./requirejs.standalone.config.js
+
+./requirejs.telesero.build.js

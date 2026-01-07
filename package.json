@@ -1,0 +1,120 @@
+{
+  "name": "@rohitcoding1991/rohit-dashboard-widget",
+  "version": "1.0.11",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rohitcoding1991/rohit-dashboard-widget.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "private": false,
+  "license": "proprietary",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "types": "src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./dist/*": "./dist/*",
+    "./amd": "./dist/dashboard-widget.js",
+    "./standalone": "./dist/widgets.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "webpack --mode production && node node_modules/requirejs/bin/r.js -o requirejs.build.js && node requirejs.prepare-standalone.js",
+    "build:debug": "cross-env BUILD_DEBUG=1 webpack --mode production && cross-env BUILD_DEBUG=1 node node_modules/requirejs/bin/r.js -o requirejs.build.js && cross-env BUILD_DEBUG=1 node requirejs.prepare-standalone.js"
+  },
+  "dependencies": {
+    "@telesero/frontend-common": "^1.0.195",
+    "polished": "^4.0.5",
+    "react-laag": "^2.0.2",
+    "react-touch-ripple": "^0.2.1",
+    "clsx": "^1.1.1",
+    "luxon": "^1.25.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-draggable": "^4.4.3",
+    "react-hooks-global-state": "^1.0.1",
+    "react-grid-layout": "1.4.2",
+    "styled-components": "^5.2.1",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@material-ui/pickers": "^3.2.10",
+    "@telesero/widget-base": "^1.0.103",
+    "react-router-dom": "^5.2.0",
+    "react-transition-group": "^4.4.1",
+    "@material-ui/styles": "^4.11.5"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@constgen/neutrino-svg-loader": "^1.9.2",
+    "@neutrinojs/eslint": "^9.4.0",
+    "@neutrinojs/jest": "^9.4.0",
+    "@neutrinojs/react": "^9.4.0",
+    "@svgr/webpack": "^5.5.0",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "babel-merge": "^3.0.0",
+    "babel-plugin-rewire": "^1.2.0",
+    "bundle-stats-webpack-plugin": "^2.3.0",
+    "compression-webpack-plugin": "^6.1.1",
+    "concatenate-files": "^0.1.1",
+    "copy-webpack-plugin": "^6.4.0",
+    "cross-env": "^7.0.3",
+    "dotenv-webpack": "^6.0.0",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "husky": "^4.3.6",
+    "jest": "^26.6.3",
+    "jest-when": "^3.0.1",
+    "lint-staged": "^10.5.1",
+    "msw": "^0.24.2",
+    "neutrino": "^9.4.0",
+    "neutrino-preset-storybook-react": "^1.0.2",
+    "prettier": "^2.2.1",
+    "raw-loader": "^4.0.2",
+    "remote-file-webpack-plugin": "^1.0.2",
+    "requirejs": "^2.3.6",
+    "requirejs-domready": "^2.0.3",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "resolutions": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-is": "^17.0.1",
+    "styled-components": "^5.2.1",
+    "memoize-one": "^5.2.1",
+    "prop-types": "^15.7.2",
+    "react-draggable": "^4.4.3",
+    "luxon": "^1.25.0",
+    "react-currency-formatter": "^1.1.0",
+    "react-window": "^1.8.6",
+    "@storybook/addon-links": "6.0.22"
+  },
+  "browserslist": [
+    ">1%",
+    "not dead",
+    "not op_mini all",
+    "last 2 version",
+    "not ie 11",
+    "not ie_mob 11"
+  ]
+}
