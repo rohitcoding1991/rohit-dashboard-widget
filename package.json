@@ -28,8 +28,8 @@
     "src"
   ],
   "scripts": {
-    "build": "webpack --mode production && node node_modules/requirejs/bin/r.js -o requirejs.build.js && node requirejs.prepare-standalone.js",
-    "build:debug": "cross-env BUILD_DEBUG=1 webpack --mode production && cross-env BUILD_DEBUG=1 node node_modules/requirejs/bin/r.js -o requirejs.build.js && cross-env BUILD_DEBUG=1 node requirejs.prepare-standalone.js"
+    "build": "node init && webpack --mode production && node node_modules/requirejs/bin/r.js -o requirejs.build.js && node requirejs.prepare-standalone.js",
+    "build:debug": "node init && cross-env BUILD_DEBUG=1 webpack --mode production && cross-env BUILD_DEBUG=1 node node_modules/requirejs/bin/r.js -o requirejs.build.js && cross-env BUILD_DEBUG=1 node requirejs.prepare-standalone.js"
   },
   "dependencies": {
     "@telesero/frontend-common": "^1.0.195",
